@@ -1,0 +1,79 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  /* transition: transform 0.5s ease-in-out; */
+  /* -webkit-transition: transform 0.5s ease-in-out; */
+  transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+  -webkit-transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+#section1 {
+  background: #ffadad;
+}
+#section2 {
+  background: #ffd6a5;
+}
+#section3 {
+  background: #fdffb6;
+}
+#section4 {
+  background: #caffbf;
+}
+
+.pagination {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 10px 0;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow-up {
+  top: 20px;
+}
+.arrow-down {
+  bottom: 20px;
+}
