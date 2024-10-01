@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  // Animate elements in page by Intersection Observer detects the elements as intersecting with the viewport. =========================================================
+  // In each section, elements auto Animates by using Intersection Observer that detects the elements as intersecting with the viewport.
   const elements = document.querySelectorAll(".left-column, .right-column");
 
   const observer = new IntersectionObserver(
