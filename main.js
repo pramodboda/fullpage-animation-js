@@ -62,6 +62,36 @@ document.addEventListener('DOMContentLoaded', function () {
       scrollUp();
     }
   });
+
+
+
+
+
+  // Animate elements in page by Intersection Observer detects the elements as intersecting with the viewport. =========================================================
+  const elements = document.querySelectorAll(".left-column, .right-column");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        console.log("entry.isIntersecting", entry.isIntersecting);
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          entry.target.classList.remove("hidden");
+          console.log("Element is visible:", entry.target);
+        } else {
+          entry.target.classList.remove("visible");
+          entry.target.classList.add("hidden");
+          console.log("Element is hidden:", entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  elements.forEach((element) => {
+    element.classList.add("hidden");
+    observer.observe(element);
+  });
 });
 
 // document.addEventListener('keydown', function (event) {
